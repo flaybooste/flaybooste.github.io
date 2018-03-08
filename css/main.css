@@ -1,0 +1,33 @@
+body {
+    font-family: 'Karma', sans-serif;
+}
+.topo 
+{
+  position: relative;
+  color: grey;
+  float:left;
+  margin: 4px;
+  padding: 4px;
+  text-decoration: none;
+
+}
+.topo:hover
+{
+
+  animation-name: topo;
+  animation-duration: 2s;
+}
+@keyframes topo{
+  0%{color: red;}
+  25%{color:yellow;}
+  50%{color:blue;}
+}
+li{
+    text-decoration: none;
+}
+#firstweb {
+  position: relative;
+  top:100px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}

@@ -4,34 +4,46 @@
 <meta charset="utf-8">
   <title>Flay</title>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+<link rel="stylesheet" href="css/main.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<header>
-  <a href="#" class="topo">Início</a>
-</header>
+  <div class="pure-menu pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading pure-menu-link">início</a>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">fotos</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">sobre</a></li>
+          </ul>
+</div>
+
+<div id="firstweb">
+  <ul>
+    <li v-for="objs in list">
+      {{objs.text}}
+    </li>
+  </ul>
+    {{text}}
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="/node_modules/vue-cookie/build/vue-cookie.js'"></script>
+<script>
+  var app = new Vue({
+    el:"#firstweb",
+    data: {
+      text:"Ola mundo",
+      list: [{'text':'Fale a merda que quiser'}]
+    },
+    methods: {
+      meuCok(){
+        this.list.push({'text': this.text})
+      }
+    }
+    })
+</script>
 </body>
-<style type="text/css">
-  body {font-family: 'Lato', sans-serif;}
-  .topo 
-  {
-    color: grey;
-    float: right;
-    margin: 4px;
-    padding: 4px;
-    text-decoration: none;
-
-  }
-  .topo:hover
-  {
-
-    animation-name: topo;
-    animation-duration: 2s;
-  }
-  @keyframes topo{
-    0%{color: red;}
-    25%{color:yellow;}
-    50%{color:blue;}
-  }
-</style>
 </html>
